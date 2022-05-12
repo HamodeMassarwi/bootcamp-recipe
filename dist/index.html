@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script id="recipe-template" type="text/x-handlebars-template">
+        {{#each title}}
+        <div class="displayData">
+            <br>
+            <a class='title' href='{{href}}'>{{title}}</a>
+            <br>
+                <img style="height: 250px; width: 250px;" class='recipesImg'src="{{thumbnail}}" alt="" >
+                <br>
+                <div class="ingredientsText">Ingredients:</div>
+            <p>{{ingredients}}</p>
+        </div>
+        {{/each}}
+    </script>
+
+    <input type="text" id="input" placeholder="What's the book ID?">
+    <button onclick=fetchRecipe()>Search</button>
+    <div class="xoxo"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.js"></script>
+    <script src="/jquery/dist/jquery.js"></script>
+    <script src="renderer.js"></script>
+    <script src="main.js"></script>
+
+
+
+
+</body>
+
+</html>
